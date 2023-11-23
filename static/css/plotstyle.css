@@ -1,0 +1,36 @@
+body {
+    background-image: url('../images/95215106009c3cccc0fa61dc28ff9765.jpg');
+    background-size: cover;
+}
+.title-background {
+    background-color: #6161617a; 
+    color: rgba(255, 255, 255, 0.934);
+    padding: 20px; 
+    margin-bottom: 30px;
+    opacity: 70%; 
+}
+
+
+.plot-container {
+    box-sizing: border-box; 
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.plot-container img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    
+}
+
+.plot-container img {
+    max-width: 100%;
+}
+
+.plot-container:hover {
+    transform: scale(1.05);
+}

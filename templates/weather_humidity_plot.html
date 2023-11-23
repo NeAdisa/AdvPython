@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Humidity Plot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/plotstyle.css') }}">
+</head>
+<body>
+    <header class="container-fluid text-center title-background">
+        <div class="container text-center ">
+            <h1>Weather Humidity Plot</h1>
+        </div>
+    </header>
+    <form method="post" action={{ url_for('weather_humidity_plot') }}>
+        <label for="new_type">Choose a type of graph:</label>
+        <select id="new_type" name="new_type">
+            <option value="barplot">barplot</option>
+            <option value="heatmap">heatmap</option>
+            <option value="lineplot">lineplot</option>
+        </select>
+        <label for="new_data1">Choose a data you want to see:</label>
+        <select id="new_data2" name="new_data2">
+            <option value="Humidity">Humidity</option>
+            <option value="Temperature (C)">Temperature (C)</option>
+            <option value="Apparent Temperature (C)">Apparent Temperature (C)</option>
+            <option value="Wind Speed (km/h)">Wind Speed (km/h)</option>
+            <option value="Wind Bearing (degrees)">Wind Bearing (degrees)</option>
+            <option value="Visibility (km)">Visibility (km)</option>
+            <option value="Pressure (millibars)">Pressure (millibars)</option>
+        </select>
+        <input type="submit" value="Update Attribute">
+    </form>
+    <main class="py-5">
+        <div class="container">
+            <div class="plot-container">
+                <img id="plot-image" src="{{ image_path }}" alt="Weather Humidity Plot">
+            </div>
+            <div class="text-center mt-4">
+                <a href="{{ url_for('index') }}" class="btn btn-primary">Back to Index</a>
+            </div>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

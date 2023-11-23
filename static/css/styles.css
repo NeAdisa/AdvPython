@@ -1,0 +1,33 @@
+
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    background-image: url('../images/95215106009c3cccc0fa61dc28ff9765.jpg');
+    background-size: cover;
+}
+
+.title-background {
+    background-color: #ffffff; 
+    color: rgb(1, 1, 1);
+    padding: 11px; 
+    margin-bottom: 30px;
+    opacity: 70%; 
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}

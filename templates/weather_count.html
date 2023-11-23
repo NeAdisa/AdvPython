@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Count</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/count-styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="title-background">
+            <h1 class="mb-4">Weather Data Numeric</h1>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Weather</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in weather_data %}
+                <tr>
+                    <td>{{ item.Weather }}</td>
+                    <td>{{ item.Count }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Back to Index</a>
+    </div>
+
+    <script src="../static/js/script.js"></script> 
+</body>
+</html>
